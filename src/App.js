@@ -18,7 +18,7 @@ const App = () => {
       <NavBar />
       <div className={k.content}>
       <Routes>
-      <Route path='/dialogs' element={<Dialogs/>}/>
+      <Route path='/dialogs/*' element={<Dialogs/>}/>
       <Route path="/profile" element={<Profile/>}/>
 
       </Routes>
