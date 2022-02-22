@@ -2,7 +2,11 @@ import React from "react";
 import k from './Dialogs.module.css';
 import { NavLink } from "react-router-dom";
 
-
+const DialogsItems = (props) =>{
+    return  <div>
+    <NavLink to={'dialogs/1'}>{props.name}</NavLink>
+</div>
+}
 
 
 
@@ -10,15 +14,10 @@ const Dialogs = (props) => {
     return (
         <div className={k.dialogs}>
             <div className={k.dialogsItem}>
-                <div>
-                    <NavLink to={'dialogs/1'}> Sasha</NavLink>
-                </div>
-                <div>
-                    <NavLink to={'dialogs/2'}> Sasha</NavLink>
-                </div>
-                <div>
-                    <NavLink to={'dialogs/3'}> Sasha</NavLink>
-                </div>
+               <DialogsItems  name ="Kate" id="1" />
+               <DialogsItems  name ="Sasha" id="2"/>
+               <DialogsItems  name ="Kit" id="3"/>
+                
             </div>
 
             <div className={k.message}>
