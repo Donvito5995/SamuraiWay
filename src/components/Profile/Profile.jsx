@@ -1,17 +1,11 @@
 import React from 'react';
 import MyPosts from './MyPosts/MyPosts';
-import k  from './Profile.module.css'
+import k  from './Profile.module.css';
+import ProfilePage from './ProfilePage/ProfilePage';
 
 const Profile = () => {
-
-
-
     return  <div className={k.content}>
-    <img src='https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg' />
-    <div >
-      ava + discription
-      
-    </div>
+    <ProfilePage />
     <MyPosts />
   </div>
 }

@@ -3,9 +3,14 @@ import k from './Dialogs.module.css';
 import { NavLink } from "react-router-dom";
 
 const DialogsItems = (props) =>{
+    let path = "/dialogs/" + props.id
     return  <div>
-    <NavLink to={'dialogs/1'}>{props.name}</NavLink>
+    <NavLink to={path}>{props.name}</NavLink>
 </div>
+}
+
+const Messages = (props)=>{
+    return <div>{props.message}</div>
 }
 
 
@@ -16,14 +21,13 @@ const Dialogs = (props) => {
             <div className={k.dialogsItem}>
                <DialogsItems  name ="Kate" id="1" />
                <DialogsItems  name ="Sasha" id="2"/>
-               <DialogsItems  name ="Kit" id="3"/>
-                
+               <DialogsItems  name ="Kit" id="3"/> 
             </div>
 
             <div className={k.message}>
-                <div>Hi</div>
-                <div>Yooooooo </div>
-                <div>What's app?</div>
+                <Messages message ="Hi"/>
+                <Messages message ="Hello"/>
+                <Messages message ="Yoo what's up?"/>
             </div>
         </div>
     )
