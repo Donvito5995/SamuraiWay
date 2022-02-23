@@ -28,19 +28,19 @@ let MessageData = [
     {id:3, message:"Hello..."},
 ]
 
+let Dialogs = DialogsData.map(d => <DialogsItems  name ={d.name} id={d.id} />)
+
+let Message = MessageData.map(m => <Messages message ={m.message} />)
+
 
     return (
         <div className={k.dialogs}>
             <div className={k.dialogsItem}>
-               <DialogsItems  name ={DialogsData[0].name} id={DialogsData[0].id} />
-               <DialogsItems  name ={DialogsData[1].name} id={DialogsData[1].id}/>
-               <DialogsItems  name ={DialogsData[2].name} id={DialogsData[2].id}/> 
+               {Dialogs}
             </div>
 
             <div className={k.message}>
-                <Messages message ={MessageData[0].message}/>
-                <Messages message ={MessageData[1].message}/>
-                <Messages message ={MessageData[2].message}/>
+                {Message}
             </div>
         </div>
     )
