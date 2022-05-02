@@ -13,7 +13,7 @@ ReactDOM.render(
       <App
           posts={state.profilePage.posts}
           dialogs={state.dialogsPage.dialogs}
-          message={state.dialogsPage.messages}
+          message={state.messages}
       />
   </React.StrictMode>,
   document.getElementById('root')

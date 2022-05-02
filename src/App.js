@@ -19,7 +19,7 @@ const App = (props) => {
       <NavBar />
       <div className={k.content}>
       <Routes>
-        <Route path="/dialogs" element={<Dialogs dialogs={props.dialogs} message={props.message} />}/>
+        <Route path="/dialogs/*" element={<Dialogs dialogs={props.dialogs} message={props.message} />}/>
         <Route path="/profile" element={<Profile posts={props.posts} />} />
 
 
