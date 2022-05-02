@@ -3,10 +3,13 @@ import MyPosts from './MyPosts/MyPosts';
 import k  from './Profile.module.css';
 import ProfilePage from './ProfilePage/ProfilePage';
 
-const Profile = () => {
+const Profile = (props) => {
+
+
+
     return  <div className={k.content}>
     <ProfilePage />
-    <MyPosts />
+    <MyPosts posts={props.posts} />
   </div>
 }
 
