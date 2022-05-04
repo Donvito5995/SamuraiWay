@@ -20,4 +20,8 @@ let state = {
     ]
 }
 
+export let addPost = () => {
+    state.profilePage.posts.push({message: "Ololo", likecount: 0, id: 3 })
+}
+
 export default state;

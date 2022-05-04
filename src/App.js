@@ -20,7 +20,7 @@ const App = (props) => {
       <div className={k.content}>
       <Routes>
         <Route path="/dialogs/*" element={<Dialogs dialogs={props.dialogs} message={props.message} />}/>
-        <Route path="/profile" element={<Profile posts={props.posts} />} />
+        <Route path="/profile" element={<Profile posts={props.posts} addPost={props.addPost}/>} />
 
 
       </Routes>

@@ -1,6 +1,7 @@
 import React from 'react';
 import k  from './MyPosts.module.css'
 import Posts from './Posts/Posts';
+import {addPost} from "../../../redux/state";
 
 
 const MyPosts = (props) => {
@@ -10,9 +11,9 @@ const MyPosts = (props) => {
 let Post = props.posts.map(p =>  <Posts key={p.id} message={p.message} likecount={p.likecount} />)
 
     let newPostElement = React.createRef();
-    let addPosts = () => {
-        let text = newPostElement.current.value
-            alert(text)
+    let addPosts = (props) => {
+        let text = newPostElement.current.value;
+        addPost(text);
     };
 
     return (<>
